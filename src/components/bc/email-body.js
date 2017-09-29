@@ -24,7 +24,7 @@ module.exports = ({ children, cloudfrontUrl, copyrightYear }) =>
 		<tr>
 			<td></td>
 			<td width='600' align='center'>
-				<EmailDiv padding='15 10'>
+				<EmailDiv padding='10'>
 					<EmailTable style={{
 						maxWidth: '600px',
 						minWidth: '300px',

@@ -2,7 +2,7 @@ const React = require('react')
 
 const EmailTable = require('./email-table')
 
-module.exports = ({ align, bgcolor, children, margin, padding }) => {
+module.exports = ({ align, bgcolor, children, margin, padding, style }) => {
 	const margins = margin ? margin.split(' ') : []
 	const marginTop = margins[0]
 	const marginRight = margins[1] || margins[0]
@@ -31,7 +31,7 @@ module.exports = ({ align, bgcolor, children, margin, padding }) => {
 						<tr>
 							<td>
 
-								<EmailTable bgcolor={bgcolor}>
+								<EmailTable bgcolor={bgcolor} style={style}>
 									<tr>
 										{paddingLeft && paddingLeft !== '0' &&
 											<td style={{ width: `${paddingLeft}px` }}></td>

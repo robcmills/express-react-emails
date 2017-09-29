@@ -1,7 +1,8 @@
 const React = require('react')
 
-module.exports = ({ children, style }) =>
+module.exports = ({ bgcolor, children, style }) =>
 	<table
+		bgcolor={bgcolor}
 		border={0}
 		cellPadding={0}
 		cellSpacing={0}

@@ -12,7 +12,7 @@ module.exports = {
 					data: {
 						cloudfrontUrl: 'https://s3.amazonaws.com/static.localhost.buildingconnected.com',
 						copyrightYear: new Date().getFullYear(),
-						firstName: 'rob',
+						userFullName: 'Robert Mills',
 					},
 				})
 			)

@@ -1,13 +1,17 @@
 'use strict'
 
 const _ = require('lodash')
-const emailComponents = require('./build/component-bundle')
+const emailRenderer = require('./renderer')
 
 module.exports = {
 	init: app => {
 		app.get('/bc/reset-password', (req, res) => {
-			const resetPassword = _.get(emailComponents, ['bc', 'reset-password'])
-			res.send(resetPassword({ firstName: 'rob' }))
+			res.send(
+				emailRenderer.render({
+					type: 'bc.reset-password',
+					data: { firstName: 'rob' },
+				})
+			)
 		})
 	}
 }

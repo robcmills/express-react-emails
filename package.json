@@ -4,14 +4,15 @@
   "description": "server rendered react emails with express help",
   "main": "index.js",
   "scripts": {
-    "start": "webpack && nodemon index.js",
-    "build": "webpack"
+    "start": "nodemon index.js",
+    "build": "webpack --watch"
   },
   "author": "robcmills",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.5",
     "lodash": "^4.17.4",
+    "mjml": "^3.3.5",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },

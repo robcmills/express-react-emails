@@ -6,33 +6,30 @@ const EmailFooter = require('./email-footer')
 
 module.exports = ({ children, cloudfrontUrl, copyrightYear }) =>
 <body style={{
-	'-webkit-font-smoothing': 'antialiased',
-	'-webkit-text-size-adjust': 'none',
 	background: '#F6F6F6',
-	direction: 'ltr',
+	height: '100% !important',
 	margin: 0,
 	padding: 0,
-	minWidth: '100%',
+	WebkitFontSmoothing: 'antialiased',
+	WebkitTextSizeAdjust: 'none',
 	width: '100% !important',
 }}>
 	<EmailTable
 		style={{
-			'-webkit-font-smoothing': 'antialiased',
-			'-webkit-text-size-adjust': 'none',
+			WebkitFontSmoothing: 'antialiased',
+			WebkitTextSizeAdjust: 'none',
 			background: '#F6F6F6',
-	}}>
+		}}
+	>
 		<tr>
 			<td></td>
 			<td width='600' align='center'>
-				<EmailDiv
-					padding='15 10'
-					style={{
-						height: '100%',
+				<EmailDiv padding='15 10'>
+					<EmailTable style={{
 						maxWidth: '600px',
 						minWidth: '300px',
-					}}
-				>
-					<EmailTable>
+						width: '600px',
+					}}>
 						<tr>
 							<td>
 								<img

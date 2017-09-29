@@ -1,11 +1,16 @@
 module.exports = ({ body, title }) => `
-<!doctype html public "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!doctype
+	html
+	public
+	"-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"
+>
 <html
 	lang="en"
-	dir="ltr"
+	style="-ms-text-size-adjust: 100%; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: none; height: 100% !important; margin: 0; padding: 0; width: 100% !important;"
 	xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:v="urn:schemas-microsoft-com:vml"
-	xmlns:o="urn:schemas-microsoft-com:office:office">
+	xmlns:o="urn:schemas-microsoft-com:office:office"
+>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />

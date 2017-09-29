@@ -18,7 +18,7 @@ module.exports = ({
 			<EmailRow height='20px' />
 			<EmailRow align='center'>
 				<EmailBtn bgcolor='#31708F'>
-					<EmailText color='#FFFFFF'>Reset my password</EmailText>
+					<EmailText color='#FFFFFF' fontWeight='bold'>Reset my password</EmailText>
 				</EmailBtn>
 			</EmailRow>
 		</EmailCard>

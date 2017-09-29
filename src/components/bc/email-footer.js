@@ -1,18 +1,22 @@
 const React = require('react')
 
+const EmailText = require('./email-text')
+const EmailRow = require('./email-row')
+
+const SmallText = ({ children }) =>
+	<EmailText style={{ fontSize: '12px' }}>{children}</EmailText>
+
 module.exports = ({ copyrightYear }) =>
-	<div>
-		<p>
+	<EmailRow align='center'>
+		<SmallText style={{ fontSize: '12px' }}>
 			<a href="http://www.buildingconnected.com">www.buildingconnected.com</a>
 			{' | '}
 			<a href="mailto:support@buildingconnected.com">support@buildingconnected.com</a>
-		</p>
-		<p>
-			&copy; Copyright
-			&nbsp; {copyrightYear} &nbsp;
-			BuildingConnected.com. All Rights Reserved.
-		</p>
-		<p>
+		</SmallText>
+		<SmallText>
+			{`© Copyright ${copyrightYear} BuildingConnected.com. All Rights Reserved.`}
+		</SmallText>
+		<SmallText>
 			600 California Street, San Francisco, CA 94109
-		</p>
-	</div>
+		</SmallText>
+	</EmailRow>

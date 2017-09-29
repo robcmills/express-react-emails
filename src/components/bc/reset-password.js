@@ -17,8 +17,12 @@ module.exports = ({
 			<EmailText>Please use the link below to reset your BuildingConnected password.</EmailText>
 			<EmailRow height='20px' />
 			<EmailRow align='center'>
-				<EmailBtn bgcolor='#31708F'>
-					<EmailText color='#FFFFFF' fontWeight='bold'>Reset my password</EmailText>
+				<EmailBtn
+					bgcolor='#31708F'
+					color='#FFFFFF'
+					href='http://localhost:3000/_/reset-password?code=3c2c7388-5a3e-45a4-b8a7-0815e2ece6f3'
+				>
+						Reset my password
 				</EmailBtn>
 			</EmailRow>
 		</EmailCard>

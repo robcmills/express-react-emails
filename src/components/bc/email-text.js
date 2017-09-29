@@ -1,7 +1,7 @@
 const React = require('react')
 
 module.exports = ({ children, color, fontWeight, style }) =>
-	<div style={{
+	<p style={{
 		color: color || '#4D4D4D',
     fontFamily: 'Helvetica Neue, Helvetica, sans-serif',
     fontWeight,
@@ -9,4 +9,4 @@ module.exports = ({ children, color, fontWeight, style }) =>
 		...style,
 	}}>
 		{children}
-	</div>
+	</p>

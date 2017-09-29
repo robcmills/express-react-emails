@@ -9,7 +9,11 @@ module.exports = {
 			res.send(
 				emailRenderer.render({
 					type: 'bc.reset-password',
-					data: { firstName: 'rob' },
+					data: {
+						cloudfrontUrl: 'https://s3.amazonaws.com/static.localhost.buildingconnected.com',
+						copyrightYear: new Date().getFullYear(),
+						firstName: 'rob',
+					},
 				})
 			)
 		})

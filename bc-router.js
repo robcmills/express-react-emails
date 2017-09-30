@@ -13,6 +13,7 @@ module.exports = {
 						cloudfrontUrl: 'https://s3.amazonaws.com/static.localhost.buildingconnected.com',
 						copyrightYear: new Date().getFullYear(),
 						userFullName: 'Robert Mills',
+						resetUrl: 'http://localhost:3000/_/reset-password?code=3c2c7388-5a3e-45a4-b8a7-0815e2ece6f3',
 					},
 				})
 			)

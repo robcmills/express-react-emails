@@ -9,6 +9,7 @@ const EmailBtn = require('./email-btn')
 module.exports = ({
 	cloudfrontUrl,
 	copyrightYear,
+	resetUrl,
 	userFullName,
 }) =>
 	<EmailBody cloudfrontUrl={cloudfrontUrl} copyrightYear={copyrightYear}>
@@ -20,7 +21,7 @@ module.exports = ({
 				<EmailBtn
 					bgcolor='#31708F'
 					color='#FFFFFF'
-					href='http://localhost:3000/_/reset-password?code=3c2c7388-5a3e-45a4-b8a7-0815e2ece6f3'
+					href={resetUrl}
 				>
 						Reset my password
 				</EmailBtn>

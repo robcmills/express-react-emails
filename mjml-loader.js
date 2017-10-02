@@ -15,5 +15,5 @@ module.exports = function mjmlLoader(content) {
     throw error
   }
 
-  return `export default ${JSON.stringify(result.html)}`
+  return `module.exports = ${JSON.stringify(result.html)}`
 }

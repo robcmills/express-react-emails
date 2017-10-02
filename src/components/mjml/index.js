@@ -8,5 +8,5 @@ const mjmlComponents = {
 
 module.exports = _.mapValues(
 	mjmlComponents,
-	mjml => props => _.template(mjml.default)(props)
+	mjml => props => _.template(mjml)(props)
 )

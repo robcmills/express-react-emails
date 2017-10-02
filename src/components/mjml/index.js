@@ -3,16 +3,10 @@ const React = require('react')
 const { mjml2html } = require('mjml')
 
 const mjmlComponents = {
-	'reset-password': require('./reset-password.js'),
+	'reset-password': require('./reset-password.mjml'),
 }
 
 module.exports = _.mapValues(
 	mjmlComponents,
-	C => props => {
-		const { errors, html } = mjml2html(C)
-		if (errors && errors.length) {
-			throw new Error('mjml render error', errors)
-		}
-		return html
-	}
+	mjml => props => _.template(mjml.default)(props)
 )

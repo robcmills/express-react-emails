@@ -9,7 +9,7 @@ module.exports = {
 			res.send(
 				emailRenderer.render({
 					type: 'mjml.reset-password',
-					data: { firstName: 'rob' },
+					data: { user: { firstName: 'Robert', lastName: 'Mills' } },
 				})
 			)
 		})

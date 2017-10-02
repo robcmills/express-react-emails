@@ -17,6 +17,12 @@ module.exports = {
 			query: {
 				presets: ['env', 'react'],
 			},
+		}, {
+			test: /\.mjml$/,
+			loader: 'mjml-loader',
 		}],
-	}
+	},
+	resolveLoader: {
+		modules: ['node_modules', __dirname],
+	},
 }

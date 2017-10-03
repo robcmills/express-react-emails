@@ -1,33 +1,27 @@
 const test = require('ava')
 
-const renderer = require('./renderer')
-const monitor = new require('./event-loop-monitor')({
-	name: 'emails',
-})
+const renderer = require('../renderer')
 
-test('bc email renders', t => {
-	const copyrightYear = new Date().getFullYear()
+test('bc email renders (without changes)', t => {
 	const email = renderer.render({
 		type: 'bc.reset-password',
 		data: {
 			cloudfrontUrl: 'https://s3.amazonaws.com/static.localhost.buildingconnected.com',
-			copyrightYear,
+			copyrightYear: new Date().getFullYear(),
 			userFullName: 'Robert Mills',
 			resetUrl: 'http://localhost:3000/_/reset-password?code=3c2c7388-5a3e-45a4-b8a7-0815e2ece6f3',
 		},
 	})
+	t.snapshot(email)
 	t.truthy(email)
 })
 
 const benchmark = (name, render) => {
-	const count = 1000
-
+	const count = 100
 	const start = new Date()
-	monitor.start()
 	for (let i=0; i < count; i++) {
 		render()
 	}
-	monitor.stop()
 	const finish = new Date()
 	const elapsed = finish - start
 	console.log(`Rendered ${count} ${name} in ${elapsed} ms`)
@@ -46,6 +40,7 @@ test('bc email benchmark', t => {
 			},
 		})
 	})
+
 	t.pass()
 })
 
@@ -56,5 +51,6 @@ test('mjml email benchmark', t => {
 			data: { user: { firstName: 'Robert', lastName: 'Mills' } },
 		})
 	})
+
 	t.pass()
 })

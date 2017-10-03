@@ -15,7 +15,8 @@ module.exports = {
 			exclude: /node_modules/,
 			loader: 'babel-loader',
 			query: {
-				presets: ['env', 'react'],
+				presets: ['env', 'react', 'stage-1'],
+				plugins: ['transform-decorators-legacy']
 			},
 		}, {
 			test: /\.mjml$/,
@@ -23,6 +24,6 @@ module.exports = {
 		}],
 	},
 	resolveLoader: {
-		modules: ['node_modules', __dirname],
+		modules: [path.resolve(__dirname, 'node_modules'), __dirname],
 	},
 }

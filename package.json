@@ -4,13 +4,14 @@
   "description": "server rendered react emails with express help",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch build index.js",
+    "start": "webpack-dev-server --hot --history-api-fallback --open",
     "build": "webpack --watch",
     "test": "ava"
   },
   "author": "robcmills",
   "license": "ISC",
   "dependencies": {
+    "babel-polyfill": "^6.26.0",
     "express": "^4.15.5",
     "heavy": "^5.0.1",
     "lodash": "^4.17.4",
@@ -21,13 +22,16 @@
   "devDependencies": {
     "ava": "^0.22.0",
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
+    "babel-loader": "^7.1.0",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-1": "^6.24.1",
-    "webpack": "^3.6.0"
+    "react-hot-loader": "^3.0.0-beta.6",
+    "babel-preset-latest": "^6.22.0",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.0"
   }
 }

@@ -23,7 +23,7 @@ module.exports = ({
 					color='#FFFFFF'
 					href={resetUrl}
 				>
-					Reset my password
+					<span style={{color: 'skyblue'}}> Reset my password THE SECOND VERSION </span>
 				</EmailBtn>
 			</EmailRow>
 		</EmailCard>

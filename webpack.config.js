@@ -15,12 +15,8 @@ module.exports = {
 			exclude: /node_modules/,
 			loader: 'babel-loader',
 			query: {
-				presets: ['env', 'react', 'stage-1'],
-				plugins: ['transform-decorators-legacy']
+				presets: ['env', 'react'],
 			},
-		}, {
-			test: /\.mjml$/,
-			loader: 'mjml-loader',
 		}],
 	},
 	resolveLoader: {

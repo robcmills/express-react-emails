@@ -4,7 +4,7 @@
   "description": "server rendered react emails with express help",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "nodemon --watch build index.js",
     "build": "webpack --watch",
     "test": "ava"
   },

@@ -13,8 +13,11 @@ const render = (Component, props) => {
   )
 }
 
+const getComponentName = pathname =>
+  pathname.startsWith('/') ? pathname.slice(1) : pathname
+
 const props = {
-  componentToRender: 'reset-password'
+  componentToRender: getComponentName(window.location.pathname)
 }
 
 render(Root, props)

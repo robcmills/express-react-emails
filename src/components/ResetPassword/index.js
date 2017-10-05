@@ -1,10 +1,10 @@
 const React = require('react')
 
-const EmailBody = require('./email-body')
-const EmailCard = require('./email-card')
-const EmailRow = require('./email-row')
-const EmailText = require('./email-text')
-const EmailBtn = require('./email-btn')
+const EmailBody = require('../common/email-body')
+const EmailCard = require('../common/email-card')
+const EmailRow = require('../common/email-row')
+const EmailText = require('../common/email-text')
+const EmailBtn = require('../common/email-btn')
 
 module.exports = ({
 	cloudfrontUrl,
@@ -23,7 +23,7 @@ module.exports = ({
 					color='#FFFFFF'
 					href={resetUrl}
 				>
-					Reset my password
+					Reset my password 4
 				</EmailBtn>
 			</EmailRow>
 		</EmailCard>
